@@ -1,9 +1,11 @@
 const assertEqual = (actual, expected) => {
-  let msg = "";
+  const errorEmoji = "\u274C"
+  const successEmoji = "\uD83D\uDFE2"
+  let output;
 
-  actual === expected ? msg = `Assertion Passed: ${actual} === ${expected}` : msg = `Assertion Failed: ${actual} !== ${expected}`;
+  actual === expected ? output = `${successEmoji} Assertion Passed: ${actual} === ${expected}` : output = `${errorEmoji} Assertion Failed: ${actual} !== ${expected}`;
   
-  console.log(msg);
+  console.log(output);
 };
 
 // TEST CODE
