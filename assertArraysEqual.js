@@ -8,10 +8,18 @@ const eqArrays = (arr1, arr2) => {
   return result;
 };
 
-const assertArraysEqual = (actual, expect) => {
-  let output
-  eqArrays(actual, expect) ? output = "Assertion Passed." : output = "Assertion Failed."
-  console.log(output)
-}
+const assertArraysEqual = (actual, expected) => {
+  const errorEmoji = '\u274C';
+  const successEmoji = '\uD83D\uDFE2';
+  let output;
 
-assertArraysEqual([1,2,3], [1,2,"3"])
+  eqArrays(actual, expected)
+    ? (output = `${successEmoji} Assertion Passed: ${actual} === ${expected}`)
+    : (output = `${errorEmoji} Assertion Failed: ${actual} !== ${expected}`);
+
+  console.log(output);
+};
+
+assertArraysEqual([ 1, 2, 3 ], [ 1, 2, '3' ]);
+assertArraysEqual([ 1, 2, 3 ], [ 1, 2, 3 ]);
+assertArraysEqual([ 1, 2, 3 ], [ 4, 5, 6 ]);
