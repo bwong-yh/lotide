@@ -19,3 +19,12 @@ const assertArraysEqual = (actual, expected) => {
 
   console.log(output);
 };
+
+const without = (source, itemsToRemove) => {
+ const filterdArr = source.filter(item => !itemsToRemove.includes(item))
+
+ console.log(filterdArr)
+}
+
+without([1, 2, 3], [1]) // => [2, 3]
+without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
