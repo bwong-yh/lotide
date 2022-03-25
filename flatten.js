@@ -27,7 +27,7 @@ const flatten = (nestedArr) => {
     !Array.isArray(item) ? flattenedArr.push(item) : flattenedArr.push(...item);
   }
 
-  console.log(flattenedArr);
+  return flattenedArr
 };
 
 flatten([1, 2, [3, 4], 5, [6]]);
