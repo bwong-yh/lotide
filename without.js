@@ -32,5 +32,5 @@ const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
-const names = ["bob", "annie", "jenny", "ken"]
-assertArraysEqual(without(names, ["annie", "ken"]), ["bob", "jenny"])
+const grades = ["A", "C", "D", "B", "D", "C"]
+assertArraysEqual(without(grades, ["C", "D"]), ["A", "B"])
