@@ -3,9 +3,9 @@ const assertEqual = (actual, expected) => {
   const successEmoji = "\uD83D\uDFE2";
   let output;
 
-  eqObjects(actual, expected)
-    ? (output = `${successEmoji} Assertion Passed: Both objects contain the same data.`)
-    : (output = `${errorEmoji} Assertion Failed: Both objects contain different data.`);
+  actual === expected
+    ? (output = `${successEmoji} Assertion Passed: ${actual} === ${expected}`)
+    : (output = `${errorEmoji} Assertion Failed: ${actual} !== ${expected}`);
 
   console.log(output);
 };
@@ -40,18 +40,18 @@ const eqObjects = (obj1, obj2) => {
   return result;
 };
 
-// testing primitive data as args
+// primitive as values
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-assertEqual(ab, ba);
+assertEqual(eqObjects(ab, ba), true);
 
 const abc = { a: "1", b: "2", c: "3" };
-assertEqual(ab, abc);
+assertEqual(eqObjects(ab, abc), true);
 
-// testing arrays as args
+// arrays as values
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-assertEqual(cd, dc);
+assertEqual(eqObjects(cd, dc), true);
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(cd, cd2);
+assertEqual(eqObjects(cd, cd2), true);
