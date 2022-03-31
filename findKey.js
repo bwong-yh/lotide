@@ -23,4 +23,4 @@ assertEqual(findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 10), undefined);
+}, x => x.stars === 3), "Akaleri");
