@@ -1,5 +1,5 @@
-const assertEqual = require("./assertEqual");
+// const assertEqual = require("./assertEqual");
 
 const head = arr => arr[0];
 
-module.exports = { assertEqual, head };
+module.exports = head;
