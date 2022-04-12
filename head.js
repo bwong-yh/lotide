@@ -1,19 +1,5 @@
-const assertEqual = (actual, expected) => {
-  const errorEmoji = '\u274C';
-  const successEmoji = '\uD83D\uDFE2';
-  let output;
+const assertEqual = require("./assertEqual");
 
-  actual === expected
-    ? (output = `${successEmoji} Assertion Passed: ${actual} === ${expected}`)
-    : (output = `${errorEmoji} Assertion Failed: ${actual} !== ${expected}`);
+const head = arr => arr[0];
 
-  console.log(output);
-};
-
-const head = (arr) => arr[0];
-
-assertEqual(head([ 5, 6, 7 ]), 5);
-assertEqual(head([ 'Hello', 'Lighthouse', 'Labs' ]), 'Hello');
-assertEqual(head([ false ]), false);
-assertEqual(head([ true ]), false);
-assertEqual(head([]), 'Hello');
+module.exports = { assertEqual, head };
