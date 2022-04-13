@@ -1,20 +1,11 @@
-const assertEqual = require("./assertEqual");
-
 const countLetters = sentence => {
-  const letters = sentence.split(" ").join("");
-  const results = {};
+  const letters = sentence.replace(/\s/g, "").split("");
 
-  for (const char of letters) {
-    results[char] ? (results[char] += 1) : (results[char] = 1);
-  }
+  return letters.reduce((tally, letter) => {
+    tally[letter] = (tally[letter] || 0) + 1;
 
-  return results;
+    return tally;
+  }, {});
 };
 
-const countResults = countLetters("lighthouse in the house");
-
-assertEqual(countResults["i"], 2);
-assertEqual(countResults["h"], 4);
-assertEqual(countResults["s"], 2);
-assertEqual(countResults["e"], 3);
-assertEqual(countResults["n"], 1);
+module.exports = countLetters;
