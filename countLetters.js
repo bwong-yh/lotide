@@ -1,22 +1,11 @@
-const assertEqual = (actual, expected) => {
-  const errorEmoji = "\u274C";
-  const successEmoji = "\uD83D\uDFE2";
-  let output;
+const assertEqual = require("./assertEqual");
 
-  actual === expected
-    ? (output = `${successEmoji} Assertion Passed: ${actual} === ${expected}`)
-    : (output = `${errorEmoji} Assertion Failed: ${actual} !== ${expected}`);
-
-  console.log(output);
-};
-
-// take in a sentence --> return counts of each letter
 const countLetters = sentence => {
-  const sentenceLetters = sentence.split(" ").join("");
+  const letters = sentence.split(" ").join("");
   const results = {};
 
-  for (const letter of sentenceLetters) {
-    results[letter] ? (results[letter] += 1) : (results[letter] = 1);
+  for (const char of letters) {
+    results[char] ? (results[char] += 1) : (results[char] = 1);
   }
 
   return results;
