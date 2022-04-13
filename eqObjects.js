@@ -1,34 +1,12 @@
-const assertEqual = (actual, expected) => {
-  const errorEmoji = "\u274C";
-  const successEmoji = "\uD83D\uDFE2";
-  let output;
-
-  actual === expected
-    ? (output = `${successEmoji} Assertion Passed: ${actual} === ${expected}`)
-    : (output = `${errorEmoji} Assertion Failed: ${actual} !== ${expected}`);
-
-  console.log(output);
-};
-
-const eqArrays = (arr1, arr2) => {
-  let result;
-
-  if (arr1.length !== arr2.length) return false;
-
-  for (let i = 0; i < arr1.length; i++) {
-    arr1[i] === arr2[i] ? (result = true) : (result = false);
-  }
-
-  return result;
-};
+const eqArrays = require("./eqArrays");
 
 const eqObjects = (obj1, obj2) => {
   let result;
 
-  // make sure lengths are the same in both objs
+  // make sure both objects have the same number of keys
   if (Object.keys(obj1).length !== Object.keys(obj2).length) return false;
 
-  // make sure values of each key are the same in both objs
+  // make sure values of each key are the same in both objects
   for (const key in obj1) {
     if (Array.isArray(obj1[key])) {
       result = eqArrays(obj1[key], obj2[key]);

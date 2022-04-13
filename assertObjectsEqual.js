@@ -1,4 +1,5 @@
 const assertObjectsEqual = (actual, expected) => {
+  // inspect will display the object value stored in each key
   const inspect = require("util").inspect;
 
   const errorEmoji = "\u274C";
