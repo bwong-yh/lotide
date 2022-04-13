@@ -1,5 +1,3 @@
-// const assertArraysEqual = require("./assertArraysEqual");
-
 const middle = arr => {
   const middleIdx = Math.floor(arr.length / 2); // for odd number of length
 
