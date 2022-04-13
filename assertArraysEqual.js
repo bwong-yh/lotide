@@ -1,4 +1,4 @@
-const { eqArrays } = require("./eqArrays");
+const eqArrays = require("./eqArrays").eqArrays;
 
 const assertArraysEqual = (actual, expected) => {
   const errorEmoji = "\u274C";

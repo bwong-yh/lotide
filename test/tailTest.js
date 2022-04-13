@@ -1,16 +1,24 @@
-const { assertEqual, tail } = require("../tail");
+const assert = require("chai").assert;
+const tail = require("../tail");
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
+describe("#tail", () => {
+  it('returns result[0] === "Lighthouse" for ["Hello", "Lighthouse", "Labs"]', () => {
+    const result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.strictEqual(result[0], "Lighthouse");
+  });
 
-const result2 = tail(["Goodbye"]);
-assertEqual(result2.length, 0);
-assertEqual(result2[0], "Goodbye");
-assertEqual(result2[0], undefined);
+  it('returns result[1] === "Labs" for ["Hello", "Lighthouse", "Labs"]', () => {
+    const result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.strictEqual(result[1], "Labs");
+  });
 
-const result3 = tail([]);
-assertEqual(result3.length, 0);
-assertEqual(result2[0], "Something");
-assertEqual(result2[0], undefined);
+  it("returns result[0] === undefined if only one item in an array", () => {
+    const result = tail(["Hello"]);
+    assert.strictEqual(result[0], undefined);
+  });
+
+  it("returns result[0] === undefined for empty array", () => {
+    const result = tail([]);
+    assert.strictEqual(result[0], undefined);
+  });
+});

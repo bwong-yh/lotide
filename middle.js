@@ -1,4 +1,4 @@
-const assertArraysEqual = require("./assertArraysEqual");
+// const assertArraysEqual = require("./assertArraysEqual");
 
 const middle = arr => {
   const middleIdx = Math.floor(arr.length / 2); // for odd number of length
@@ -12,4 +12,4 @@ const middle = arr => {
   }
 };
 
-module.exports = { assertArraysEqual, middle };
+module.exports = middle;
