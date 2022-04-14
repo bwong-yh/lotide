@@ -5,6 +5,7 @@ const letterPositions = sentence => {
     results[sentence[i]] ? results[sentence[i]].push(i) : (results[sentence[i]] = [i]);
   }
 
+  delete results[" "];
   return results;
 };
 
