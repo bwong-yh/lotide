@@ -32,6 +32,12 @@ describe("#eqObjects", () => {
     assert.strictEqual(eqObjects(xy, yx), true);
   });
 
+  it("returns true for { a: { z: 1 }, b: 2, c: [2, 4, 5] } and { c: [5, 2, 4], b: 2, a: { z: 1 } }", () => {
+    const xy = { a: { z: 1 }, b: 2, c: [2, 4, 5] };
+    const yx = { c: [5, 2, 4], b: 2, a: { z: 1 } };
+    assert.strictEqual(eqObjects(xy, yx), true);
+  });
+
   it("returns false for { a: { y: 0, z: 1 }, b: 2 } and { a: { z: 1 }, b: 2 }", () => {
     const ij = { a: { y: 0, z: 1 }, b: 2 };
     const ji = { a: { z: 1 }, b: 2 };
