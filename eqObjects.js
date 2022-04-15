@@ -9,9 +9,7 @@ const eqObjects = (obj1, obj2) => {
     }
 
     if (typeof obj1[key] === "object") {
-      if (!eqObjects(obj1[key], obj2[key])) {
-        return false;
-      }
+      if (!eqObjects(obj1[key], obj2[key])) return false;
     } else {
       if (obj1[key] !== obj2[key]) return false;
     }
