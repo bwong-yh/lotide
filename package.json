@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@bwong.yh/lotide",
   "version": "1.0.0",
-  "description": "## Summary This is the very first project from the Web Development Flex Program at Lighthouse Labs! It is a simpler and smaller version of the [Lodash](https://github.com/lodash/lodash) library.",
+  "description": "This is the very first project from the Web Development Flex Program at Lighthouse Labs! It is a simpler and smaller version of the [Lodash](https://github.com/lodash/lodash) library.",
   "directories": {
     "test": "test"
   },
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/bwong-yh/lotide.git"
   },
-  "author": "",
+  "author": "Billy Wong <bwong.yh@gmail.com> (https://github.com/bwong-yh)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bwong-yh/lotide/issues"

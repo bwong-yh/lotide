@@ -26,7 +26,7 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-- `assertEqual(arg1, arg2) {}`: takes two primitive data arguments and does a strict comparsion between them, then logs the asseertion result in the console.
+- `assertEqual(arg1, arg2) {}`: takes two primitive data arguments and does a strict comparsion between them, then logs the assertion result in the console.
 
 - `assertArraysEqual(arr1, arr2) {}`: similar to assertEqual, except it takes two arrays, does a strict comparsion of elements in both arrays and logs assertion result in the console.
 
