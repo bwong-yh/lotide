@@ -34,7 +34,7 @@ The following functions are currently implemented:
 
 - `countLetters(str) {}`: takes a string arguement and returns the counts of each letter in the string.
 
-- `countOnly([a, b, b], {a = true, b = false}) {}`: takes an array as first arguement and an object as second argument. Then returns the counts for the element in the array that specified in the object.
+- `countOnly([a, b, b], {a: true, b: false}) {}`: takes an array as first arguement and an object as second argument. Then returns the counts for the element in the array that specified in the object.
 
 - `eqArrays(arr1, arr2) {}`: takes two arrays and compares their elements. It returns _true_ if the elements are the same, and _false_ if different. **_This is used for arrays containing the SAME data type. It will NOT work with mixed data types arrays._**
 
