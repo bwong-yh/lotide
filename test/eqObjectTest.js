@@ -25,4 +25,16 @@ describe("#eqObjects", () => {
     const cd2 = { c: "1", d: ["2", 3, 4] };
     assert.strictEqual(eqObjects(cd, cd2), false);
   });
+
+  it("returns true for { a: { z: 1 }, b: 2 } and { b: 2, a: { z: 1 } }", () => {
+    const xy = { a: { z: 1 }, b: 2 };
+    const yx = { b: 2, a: { z: 1 } };
+    assert.strictEqual(eqObjects(xy, yx), true);
+  });
+
+  it("returns false for { a: { y: 0, z: 1 }, b: 2 } and { a: { z: 1 }, b: 2 }", () => {
+    const ij = { a: { y: 0, z: 1 }, b: 2 };
+    const ji = { a: { z: 1 }, b: 2 };
+    assert.strictEqual(eqObjects(ij, ji), false);
+  });
 });
